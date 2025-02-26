@@ -1,0 +1,84 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Helvetica Neue', sans-serif;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+}
+
+.auth-container {
+    display: flex; /* Use flexbox to arrange forms side by side */
+    justify-content: space-between; /* Space between forms */
+    gap: 20px; /* Add gap between flex items */
+    width: 80%; /* Adjust width as needed */
+    max-width: 900px; /* Max width for larger screens */
+    padding: 30px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-box {
+    width: 45%; /* Each form box takes 45% of the container */
+    padding: 20px;
+    border: 1px solid #ddd; /* Optional: Add a border to each box for separation */
+    border-radius: 8px; /* Rounded corners for form boxes */
+    background-color: #f9f9f9; /* Slight background color for distinction */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button {
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .auth-container {
+        flex-direction: column; /* Stack forms on smaller screens */
+        width: 90%; /* Adjust width */
+    }
+    .form-box {
+        width: 100%; /* Full width for forms in stacked layout */
+        margin-bottom: 20px; /* Add some space between stacked forms */
+    }
+}
